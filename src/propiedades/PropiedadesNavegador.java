@@ -21,12 +21,13 @@ public class PropiedadesNavegador {
 
             driverCd.get("https://es.wikipedia.org/wiki/Wikipedia:Portada");
 
-            driverCd.manage().window().maximize(); //ocupa toda la pantalla
+            driverCd.manage().window().fullscreen(); //ocupa toda la pantalla
 
-        // minimiza la pantalla 
-        Dimension dimension = new Dimension(100,100);
 
-        driverCd.manage().window().setSize(dimension);
+        driverCd.close();
+
+
+
     }
     }
 
