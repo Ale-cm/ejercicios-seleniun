@@ -15,7 +15,9 @@ public class PropiedadesNavegador {
         //elijo la posicion de la ventana
         chromeOptions.addArguments("--window-position=850,0");
         //cambio el tamaño
-        chromeOptions.addArguments("window-size=800,500");
+        chromeOptions.addArguments("--window-size=800,500");
+        // para no habrir navegador
+        chromeOptions.addArguments("--headless");
             WebDriver driverCd = new ChromeDriver(chromeOptions);
 
 
@@ -23,7 +25,8 @@ public class PropiedadesNavegador {
 
             driverCd.manage().window().fullscreen(); //ocupa toda la pantalla
 
-
+        String titulo= driverCd.getTitle();
+        System.out.println(titulo);
         driverCd.close();
 
 
